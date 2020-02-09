@@ -9,7 +9,7 @@ b = Watir::Browser.new :chrome, headless: true
 
 
 
-b.goto 'https://www.bol.com/nl/s/?searchtext=7442917181107' #item with 9 qty 7426870705815 meer qty: 7435127091076
+b.goto 'https://www.bol.com/nl/s/?searchtext=0190199223189' #item with 9 qty 7426870705815 meer qty: 7435127091076
 sleep 1
 puts "thank you, working...."
 p = Nokogiri::HTML.parse(b.html)
@@ -20,8 +20,8 @@ puts "product:" + product
 
 #grab main seller
 
-main_seller = p.xpath("/html/body/div/main/wsp-async-browse/div/div/div[3]/div/div[1]/div/div[4]/wsp-async-browse-product-list/ul/li/div[2]/wsp-buy-block/div[3]/a").text
-puts "main seller is #{main_seller}"
+main_seller = p.xpath("/html/body/div/main/wsp-async-browse/div/div/div[3]/div/div[1]/div/div[4]/wsp-async-browse-product-list/ul/li/div[2]/wsp-buy-block/div[3]").text
+puts "main seller is #{main_seller.strip}"
 
 #grab image
 
