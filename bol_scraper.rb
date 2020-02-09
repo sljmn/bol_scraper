@@ -4,14 +4,14 @@ require 'net/http'
 require 'nokogiri'
 
 b = Watir::Browser.new :chrome, headless: true
-ean = 7426870705815
 
 
 
 
-b.goto 'https://www.bol.com/nl/s/?searchtext=7426870705815' #item with 9 qty 7426870705815 meer qty: 7435127091076
+
+b.goto 'https://www.bol.com/nl/s/?searchtext=7442917181107' #item with 9 qty 7426870705815 meer qty: 7435127091076
 sleep 1
-puts "thank you, working on #{ean}"
+puts "thank you, working...."
 p = Nokogiri::HTML.parse(b.html)
 
 # grab product name
