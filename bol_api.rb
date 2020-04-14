@@ -3,7 +3,7 @@ require 'json'
 require 'active_support/core_ext/hash'
 
 
-url = 'https://api.bol.com/catalog/v4/products/9200000085144588?apikey=ECC507AE2CBC4F5B9B2B394A62D3C264&includeAttributes=false&format=json&offers=all'
+url = 'https://api.bol.com/catalog/v4/products/8001090603449?apikey=ECC507AE2CBC4F5B9B2B394A62D3C264&includeAttributes=false&format=json&offers=all'
 response = HTTParty.get(url).parsed_response
 
 
@@ -33,7 +33,7 @@ offers = offerdata.fetch("offers")
 
 bestoffer = offers[0]["bestOffer"]
 
-puts bestoffer  
+puts bestoffer
 
 
 offers.each do |key|

@@ -9,7 +9,7 @@ b = Watir::Browser.new :chrome, headless: true
 
 
 
-b.goto 'https://www.bol.com/nl/s/?searchtext=0190199223189' #item with 9 qty 7426870705815 meer qty: 7435127091076
+b.goto 'https://www.bol.com/nl/s/?searchtext=0743970172499' #item with 9 qty 7426870705815 meer qty: 7435127091076
 sleep 1
 puts "thank you, working...."
 p = Nokogiri::HTML.parse(b.html)
